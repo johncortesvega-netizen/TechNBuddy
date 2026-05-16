@@ -1,0 +1,46 @@
+# PATCH TB-02 MANIFEST — Green / Orange / Red Signal Mirror
+
+Patch ID: TB-02
+Status: COMPLETE
+Base: TechnBuddy v0.2 full app / TechnBuddy v0.5.0 app label
+Output app label: TechnBuddy v0.5.1
+
+## Purpose
+
+Pivot TechnBuddy from a chat-style Sydney Protocol companion into a simpler quick signal mirror:
+
+- GREEN — Helpful signals
+- ORANGE — Check zone
+- RED — High-risk factors
+- Next safe step
+- Your decision
+
+## Changed files
+
+- app.py
+- README.md
+- PATCH_STATUS.md
+- tests/test_tb_02_signal_zones.py
+- PATCH_TB_02_MANIFEST.txt
+- PATCH_TB_02_RECOVERY_NOTE.md
+
+## Boundaries preserved
+
+- One input only.
+- No module router.
+- No scores.
+- No verdicts.
+- No certification.
+- No ALETHEIA SANCTUARY / THRESHOLD / ASYLUM states.
+- No LLM requirement for the core scan.
+- Human judgment remains required.
+
+## Severity-to-zone mapping
+
+- Sydney Protocol Core `Severity.INFO` -> TechnBuddy GREEN
+- Sydney Protocol Core `Severity.REVIEW` -> TechnBuddy ORANGE
+- Sydney Protocol Core `Severity.WARNING` -> TechnBuddy RED
+
+## Notes
+
+The existing emergency/safety overlay remains local to the app and fail-closed for possible overdose, self-harm, or immediate danger contexts.

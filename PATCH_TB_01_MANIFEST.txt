@@ -1,0 +1,26 @@
+TechnBuddy Patch TB-01 — Sydney Protocol Core Connection
+
+Updated files:
+- app.py
+- README.md
+- PATCH_STATUS.md
+- PATCH_TB_01_MANIFEST.txt
+- PATCH_TB_01_RECOVERY_NOTE.md
+- tests/test_tb_01_core_connection.py
+
+Added vendored framework:
+- sydney_protocol_core/
+
+Scope:
+- Connect TechnBuddy to Sydney Protocol Core v0.3.
+- Keep one chatbox only.
+- Do not add module cards, Speech Reader, ALETHEIA imports, or scoring.
+- Preserve non-throne boundary language.
+- Remove embedded base64 mascot from app.py and load the existing asset file.
+
+Validation:
+- PYTHONPATH=. pytest -q tests/test_tb_01_core_connection.py
+- python -m py_compile app.py sydney_protocol_core/*.py
+
+Result:
+- 4 passed
